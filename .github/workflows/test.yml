@@ -70,7 +70,6 @@ jobs:
               $project: ID!
               $item: ID!
               $agent_field: ID!
-              $agent_value: ID!
             ) {
               set_agent: updateProjectV2ItemFieldValue(input: {
                 projectId: $project
@@ -84,4 +83,4 @@ jobs:
                   id
                   }
               }
-            }' -f project=$PROJECT_ID -f item=$ITEM_ID -f agent_field=$AGENT_FIELD_ID -f agent_value=$PYTHON_FIELD_OPTION_ID --silent
+            }' -f project=$PROJECT_ID -f item=$ITEM_ID -f agent_field=$AGENT_FIELD_ID -f --silent
