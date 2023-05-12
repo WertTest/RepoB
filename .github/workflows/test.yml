@@ -83,4 +83,4 @@ jobs:
                   id
                   }
               }
-            }' -f project=$PROJECT_ID -f item=$ITEM_ID -f agent_field=$AGENT_FIELD_ID -f --silent
+            }' -f project=$PROJECT_ID -f item=$ITEM_ID -f agent_field=$AGENT_FIELD_ID --silent
