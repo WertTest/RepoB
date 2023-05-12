@@ -77,7 +77,7 @@ jobs:
                 itemId: $item
                 fieldId: $agent_field
                 value: {
-                  singleSelectOptionId: $agent_value
+                  singleSelectOptionId: "b0a365f6"
                   }
               }) {
                 projectV2Item {
