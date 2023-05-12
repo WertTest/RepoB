@@ -40,6 +40,7 @@ jobs:
 
           echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
           echo 'AGENT_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Agent") | .id' project_data.json) >> $GITHUB_ENV
+          echo 'PYTHON_FIELD_OPTION_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Agent") | .options | select(.name== "Python") | .id' project_data.json) >> $GITHUB_ENV
         
       - name: Add issue to project
         env:
@@ -83,4 +84,4 @@ jobs:
                   id
                   }
               }
-            }' -f project=$PROJECT_ID -f item=$ITEM_ID -f agent_field=$AGENT_FIELD_ID -f agent_value=Python --silent
+            }' -f project=$PROJECT_ID -f item=$ITEM_ID -f agent_field=$AGENT_FIELD_ID -f agent_value=$PYTHON_FIELD_OPTION_ID --silent
