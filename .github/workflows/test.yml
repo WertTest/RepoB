@@ -70,7 +70,7 @@ jobs:
               $project: ID!
               $item: ID!
               $agent_field: ID!
-              $agent_value: String!
+              $agent_value: ID!
             ) {
               set_agent: updateProjectV2ItemFieldValue(input: {
                 projectId: $project
